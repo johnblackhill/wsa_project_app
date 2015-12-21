@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	h1=username + "'s items"
+	ul
+		each val in items
+			li=val.item		

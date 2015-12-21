@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1=username + "'s items"
+	ul
+		each val in items
+			li=val.item		
+	p
+		| Add a new item
+		form(action="/items/newitem", method="post")
+			p
+				| item: 
+				input.form-control(type="text", name="item")
+			p
+				input.btn.btn-primary(type="submit", value="Add item")
