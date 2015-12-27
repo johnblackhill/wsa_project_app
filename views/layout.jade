@@ -25,28 +25,23 @@ html
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active
-              a(href="#") Link 01
+            // li.active marks the link as "active" or "hovered"
+            li
+              a(href="/users/register") Register
             li
               a(href="#") Link 02
-            li.dropdown
-              a.dropdown-toggle( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ) Dropdown 
-                span.caret
-              ul.dropdown-menu( role="menu" )
-                li: a( href="#" ) SubLink 01
-                li: a( href="#" ) SubLink 02
-                li: a( href="#" ) SubLink 03
-                li.divider
-                li.dropdown-header Nav header
-                li: a( href="#" ) Separated SubLink 01
-                li: a( href="#" ) Separated SubLink 02
+            
           form.navbar-form.navbar-left(role="search")
             .form-group
               input.form-control(type="text", placeholder="Search")
             button.btn.btn-default(type="submit") Submit
+
           ul.nav.navbar-nav.navbar-right
             li
               p.navbar-text Already have an account?
+            li
+              a(href="/users/login") Login
+          // Commented Login block due to dropdown not working correctly.      
             li.dropdown
               a.dropdown-toggle(href="#", data-toggle="dropdown")
                 b Login

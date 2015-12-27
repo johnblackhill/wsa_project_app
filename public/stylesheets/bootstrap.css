@@ -18,16 +18,17 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  background-image: url(../images/index_bg2.jpg);
   margin: 0;
 }
 .bkimg_i {
-    background-image: url(./public/images/index_bg.jpg);
+    background-image: url(../images/index_bg2.jpg);
 }
 .bkimg_l {
-    background-image: url(./public/images/index_bg.jpg);
+    background-image: url(../images/li_bg.jpg);
 }
 .bkimg_e {
-    background-image: url(./public/images/index_bg.jpg);
+    background-image: url(../images/404_bg.jpg);
 }
 article,
 aside,
