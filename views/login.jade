@@ -1,11 +1,53 @@
 extends layout
 
 block content
-	.container
-				form.form-signin(action="/users/login", method="post")
-					h2.form-signin-heading Please sign in
-					input.input-block-level(type="text", name="username", placeholder="Email address")
-					input.input-block-level(type="password", name="password", placeholder="Password")
-					label.checkbox.
-						<input type="checkbox" value="remember-me" /> Remember me
-					button.btn.btn-large.btn-primary(type="submit") Sign in
+
+  .container
+      .row
+        .Absolute-Center.is-Responsive
+          .col-sm-5.col-cntr
+            .jumbotron
+              form.loginForm(action='/users/login', method="post")
+                .form-group.input-group
+                  span.input-group-addon
+                    i.fa.fa-user
+                  |             
+                  input.form-control(type='text', name='username', placeholder='username')
+                |           
+                .form-group.input-group
+                  span.input-group-addon
+                    i.fa.fa-lock
+                  |             
+                  input.form-control(type='password', name='password', placeholder='password')
+                |           
+                .checkbox
+                  label
+                    input(type='checkbox')
+                    |  I agree to the 
+                    a(href='#') Terms and Conditions
+                |           
+                .form-group
+                  button.btn.btn-def.btn-block(type='button') Login
+                |           
+                .form-group.text-center
+                  a(href='#') Forgot Password
+                  | &nbsp;|&nbsp;
+                  a(href='#') Support
+
+//  
+  .container
+    form.form-signin(action="/users/login", method="post")
+    h2.form-signin-heading Please sign in
+    input.input-block-level(type="text", name="username", placeholder="Email address")
+    input.input-block-level(type="password", name="password", placeholder="Password")
+    label.checkbox.
+      <input type="checkbox" value="remember-me" /> Remember me
+    button.btn.btn-large.btn-primary(type="submit") Sign in
+    
+    .container
+    .col-lg-4
+      .panel.panel-default
+        .panel-heading
+          h4  Best Item of the Week #1
+        .panel-body
+          | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.

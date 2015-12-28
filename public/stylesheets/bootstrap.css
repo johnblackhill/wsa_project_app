@@ -2263,6 +2263,12 @@ pre code {
     margin-left: 0%;
   }
 }
+
+.col-cntr{ /* //////////////////////////////// ADDED */
+    float: none;
+    margin: 0 auto;
+}
+
 table {
   background-color: transparent;
 }
@@ -4975,6 +4981,7 @@ a.badge:focus {
 .jumbotron {
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-top: 30px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #303030;
