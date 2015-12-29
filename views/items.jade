@@ -1,6 +1,18 @@
 extends layout
 
 block content
+ .control-group
+  .col-md-7.col-cntr
+    .panel.panel-default
+     .panel-heading
+      h1=username + "'s items"
+     .panel-body 
+      ul
+        each val in items
+          li=val.item		
+
+//
+ block content
 	h1=username + "'s items"
 	ul
 		each val in items

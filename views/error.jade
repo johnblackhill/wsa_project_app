@@ -1,6 +1,14 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
+  body.bkimg_e
+  .col-sm-8.control-group.col-cntr
+    .panel.panel-default
+      .panel-heading
+        h2= "Our position is correct, but Alderaan is gone!"
+        h4= " (" + error.status + ") - " + message
+      .panel-body
+        p
+          | You are looking for something that should not, is not meant to or will not be here but, if You think this is a mistake, contact us!!
+// ONLY FOR DEV BUILD. DELETE ON PROD.
   pre #{error.stack}

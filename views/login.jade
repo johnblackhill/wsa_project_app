@@ -1,38 +1,32 @@
 extends layout
 
 block content
-
+  body.bkimg_l
   .container
-      .row
-        .Absolute-Center.is-Responsive
-          .col-sm-5.col-cntr
-            .jumbotron
-              form.loginForm(action='/users/login', method="post")
-                .form-group.input-group
-                  span.input-group-addon
-                    i.fa.fa-user
-                  |             
-                  input.form-control(type='text', name='username', placeholder='username')
-                |           
-                .form-group.input-group
-                  span.input-group-addon
-                    i.fa.fa-lock
-                  |             
-                  input.form-control(type='password', name='password', placeholder='password')
-                |           
-                .checkbox
-                  label
-                    input(type='checkbox')
-                    |  I agree to the 
-                    a(href='#') Terms and Conditions
-                |           
-                .form-group
-                  button.btn.btn-def.btn-block(type='button') Login
-                |           
-                .form-group.text-center
-                  a(href='#') Forgot Password
-                  | &nbsp;|&nbsp;
-                  a(href='#') Support
+    .Absolute-Center.is-Responsive.control-group
+      .col-sm-5.col-cntr
+        .panel
+          .panel-heading
+           h2 Log In
+          .panel-body
+            form.loginForm(action='/users/login', method="post")
+             .form-group.input-group
+               span.input-group-addon
+                 i.fa.fa-user
+               |             
+               input.form-control(type='text', name='username', placeholder='username')
+             |           
+             .form-group.input-group
+               span.input-group-addon
+                 i.fa.fa-lock
+               |             
+               input.form-control(type='password', name='password', placeholder='password')
+             |           
+             .form-group
+               button.btn.btn-primary.btn-block(type='button') Login
+             |           
+             .form-group.text-center
+               a(href='#') Forgotten Password?
 
 //  
   .container
