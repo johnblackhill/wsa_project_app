@@ -2,20 +2,22 @@ extends layout
 
 
 block content
- .control-group
-  .col-md-7.col-cntr
-    .panel.panel-default
-     .panel-heading
-      h1=username + "'s items"
-     .panel-body 
-      ul
-        each val in items
-          li=val.item		
-      p
-        | Add a new item
-        form(action="/items/newitem", method="post")
+  .control-group
+    .col-md-7.col-cntr
+      .panel.panel-default
+        .panel-heading
+          h1=username + "'s items"
+        .panel-body 
+          ul
+            each val in items
+              .list-group
+                a.list-group-item( href="#" )
+                 h4.list-group-item-heading=val.item			
           p
-            | item: 
-            input.form-control(type="text", name="item")
-          p
-            input.btn.btn-primary(type="submit", value="Add item")
+            | Add a new item
+            form(action="/items/newitem", method="post")
+              p
+                | item: 
+                input.form-control(type="text", name="item")
+              p
+                input.btn.btn-primary(type="submit", value="Add item")
