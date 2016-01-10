@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var tasks = require('./routes/items');
+var items = require('./routes/items');
+var obj = require('./routes/objects'); // AÑADIDA
 
 var app = express();
 
@@ -35,8 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', routes);
-app.use('/items', tasks);
+app.use('/items', items);
 app.use('/users', users);
+app.use('/objects', obj); // AÑADIDA
 
 
 // catch 404 and forward to error handler
