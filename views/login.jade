@@ -23,25 +23,7 @@ block content
                input.form-control(type='password', name='password', placeholder='password')
              |           
              .form-group
-               button.btn.btn-primary.btn-block(type='button') Login
+               input.btn.btn-primary(type='submit', value="Login")
              |           
              .form-group.text-center
                a(href='#') Forgotten Password?
-
-//  
-  .container
-    form.form-signin(action="/users/login", method="post")
-    h2.form-signin-heading Please sign in
-    input.input-block-level(type="text", name="username", placeholder="Email address")
-    input.input-block-level(type="password", name="password", placeholder="Password")
-    label.checkbox.
-      <input type="checkbox" value="remember-me" /> Remember me
-    button.btn.btn-large.btn-primary(type="submit") Sign in
-    
-    .container
-    .col-lg-4
-      .panel.panel-default
-        .panel-heading
-          h4  Best Item of the Week #1
-        .panel-body
-          | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.

@@ -22,7 +22,7 @@ router.post('/register', function(req, res, next) {
 			res.send("Ha ocurrido un error en el registro del usuario");
 		} else {
 			req.session.username = user.username;
-			res.redirect('/items/' + user.username);
+			res.redirect('/objects/' + user.username);
 		}
 	});
 });
@@ -51,7 +51,7 @@ router.post('/login', function(req, res, next) {
 			} 
 			else {
 				req.session.username = user.username;
-				res.redirect('/items/' + user.username);	
+				res.redirect('/objects/' + user.username);	
 			}
 		}
 	});

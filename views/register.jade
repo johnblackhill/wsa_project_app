@@ -8,22 +8,12 @@ block content
     form(id='register-form', method='POST', action='/users/register' novalidate)
       .form-group
         label(for='username') Username
-        input(type='text', name='username', class='form-control', 
-          id='username', placeholder='Enter username')
+        input.form-control(type='text', name='username', placeholder='Enter username')
       .form-group
         label(for='password') Password
-        input(type='password', name='password', class='form-control', 
-          id='password', placeholder='Enter password')
-      .form-group
-        label(for='confirm-password') Confirm Password
-        input(type='password', name='confirm-password', class='form-control', 
-          id='confirm-password', placeholder='Confirm password')
+        input.form-control(type='password', name='password', placeholder='Enter password')
       .form-group
         label(for='email') Email
-        input(type='email', name='email', class='form-control', 
+        input.form-control(type='email', name='email', class='form-control', 
           id='email', placeholder='Enter email')    
-      .form-group
-        label(for='confirm-email') Confirm Email
-        input(type='email', name='confirm-email', class='form-control', 
-          id='confirm-email', placeholder='Confirm email')
       input.btn.btn-primary(type="submit", value="Register")

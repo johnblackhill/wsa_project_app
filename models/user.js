@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
-var userItems = require('./db').getUserItemsModel();
+var userObjects = require('./db').getUserObjectsModel();
+
+var redisUserObject = require('./db_redis')
 
 var model = {};
 
@@ -12,7 +14,9 @@ var model = {};
 
 model.registerUser = function(userData, cb) {
 
-	var user = new userItems(userData);
+    //redisUserObject.set(userData.username, userData.email);
+
+	var user = new userObjects(userData);
 	user.save(cb);
 }
 
@@ -25,7 +29,7 @@ model.registerUser = function(userData, cb) {
 
 model.loginUser = function(userData, cb) {
 	
-	userItems.findOne({username: userData.username, password: userData.password}, cb);
+	userObjects.findOne({username: userData.username, password: userData.password}, cb);
 }
 
 

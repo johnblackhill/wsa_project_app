@@ -1,15 +1,15 @@
 var mongoose = require('mongoose');
-var connection = mongoose.createConnection("mongodb://localhost/aswDB");
+var connection = mongoose.createConnection("mongodb://localhost/quickDB");
 
 
-var userItemsSchema = mongoose.Schema({ 
+var userObjectsSchema = mongoose.Schema({ 
 			username: String,
 			email: String,
 			password: String,
             p_img: { type: String, default: "userIMG.jpg" },
             regdate: { type: Date, default: Date.now },
-			items: [{
-				item: String,
+			objects: [{
+				object: String,
                 descr: String,
                 score: String,
                 ref: String,
@@ -19,9 +19,10 @@ var userItemsSchema = mongoose.Schema({
 			});
 			
 			
+			
 module.exports = {
-	getUserItemsModel: function() {
-		return connection.model("userItems", userItemsSchema);
+	getUserObjectsModel: function() {
+		return connection.model("userObjects", userObjectsSchema);
 	}
 };
 

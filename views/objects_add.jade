@@ -1,0 +1,23 @@
+extends layout
+
+
+block content
+  .control-group
+    .col-md-7.col-cntr
+      .panel.panel-default
+        .panel-heading
+          h1=username + "'s objects"
+        .panel-body 
+          ul
+            each val in objects
+              .list-group
+                a.list-group-item( href="#" )
+                 h4.list-group-item-heading=val.object		
+          p
+            | Add a new object
+            form(action="/objects/newobject", method="post")
+              p
+                | object: 
+                input.form-control(type="text", name="object")
+              p
+                input.btn.btn-primary(type="submit", value="Add object")
