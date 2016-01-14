@@ -10,5 +10,5 @@ block content
          ul
            each val in objects
              .list-group
-               a.list-group-item( href="#" )
+               a.list-group-item( href= "http://localhost:3000/objects/username/" + _id )
                  h4.list-group-item-heading=val.item
