@@ -1,9 +1,9 @@
 extends layout
 
-
 block content
+  body.bkimg_l
   .control-group
-    .col-md-7.col-cntr
+    .col-md-9.col-cntr
       .panel.panel-default
         .panel-heading
           h1=username + "'s objects"
@@ -11,13 +11,28 @@ block content
           ul
             each val in objects
               .list-group
-                a.list-group-item( href="#" )
-                 h4.list-group-item-heading=val.object		
+                
+                .list-group-item
+                  .row
+                    .col-xs-1
+                      img.img-rounded(src='/images/placeholders/unknownitem.jpg' width="35" height="35")
+                    .control-group-xs  
+                      .col-xs-8
+                        h3.list-group-item-heading=val.object
+                      a.col-md-1(href='#1')
+                        span
+                          i.fa.fa-lg.fa-facebook
+                      a.col-md-1(href='#2')
+                        span
+                          i.fa.fa-lg.fa-twitter
+                      a.col-md-1(href='#3')
+                        span
+                          i.fa.fa-lg.fa-google-plus
           p
             | Add a new object
             form(action="/objects/newobject", method="post")
               p
                 | object: 
-                input.form-control(type="text", name="object")
+                input.form-control(type="text", name="object", required='')
               p
                 input.btn.btn-primary(type="submit", value="Add object")

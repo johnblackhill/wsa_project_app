@@ -5,15 +5,15 @@ block content
   .well.col-sm-5.col-cntr.control-group
     h1  Welcome Aboard!
     hr
-    form(id='register-form', method='POST', action='/users/register' novalidate)
+    form(id='register-form', method='POST', action='/users/register')
       .form-group
         label(for='username') Username
-        input.form-control(type='text', name='username', placeholder='Enter username')
+        input.form-control(type='text', name='username', placeholder='Enter username', required='')
       .form-group
         label(for='password') Password
-        input.form-control(type='password', name='password', placeholder='Enter password')
+        input.form-control(type='password', name='password', placeholder='Enter password', required='')
       .form-group
         label(for='email') Email
         input.form-control(type='email', name='email', class='form-control', 
-          id='email', placeholder='Enter email')    
+          id='email', placeholder='Enter email', required='')    
       input.btn.btn-primary(type="submit", value="Register")

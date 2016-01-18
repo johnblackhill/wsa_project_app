@@ -7072,3 +7072,7 @@ a.list-group-item-danger.active:focus {
 .control-group {
     margin-top: 30px;
 }
+
+.control-group-xs {
+    margin-top: 2px;
+}
